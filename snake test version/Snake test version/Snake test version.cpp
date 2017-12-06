@@ -114,10 +114,15 @@ int main() {
 	for (int i=0;i<10;i++)
 		m[i].New();
 	
-
 	 s[0].x=10;
 	 s[0].y=10;
 
+<<<<<<< HEAD
+	 s[0].x=10;
+	 s[0].y=10;
+
+=======
+>>>>>>> 623e62b404e041aa8f793cc72a7ac174db8e1f58
 
 glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB );
 glutInitWindowSize (w, h);
