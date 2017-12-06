@@ -292,18 +292,17 @@ void timer(int = 0)
  glutTimerFunc(50,timer,0);
 }
 
-int main(int argc, char **argv) {
+int main() {
 
 	srand(time(0));
 	
 	for (int i=0;i<10;i++)
 		m[i].New();
 	
+	 s[0].x=10;
+	 s[0].y=10;
 
-	 s[i].x=10;
-	 s[i].y=10;
 
-glutInit(&argc, argv);
 glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB );
 glutInitWindowSize (w, h);
 glutCreateWindow ("Test"); 
