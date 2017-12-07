@@ -27,7 +27,7 @@ public:
         y=rand() % M;   }
     
     void DrawApple()
-   {   glColor3f(0.0,1.0,0.0);
+   {   glColor3f(1.0,0.0,0.0);
        glRectf(x*Scale,y*Scale,(x+1)*Scale,(y+1)*Scale); }
 
 } m[10];
@@ -62,7 +62,8 @@ public:
  }
  
 
-
+ 
+ 
 void DrawField()
   {
    glColor3f(0.0,0.7,0.0);
@@ -79,7 +80,7 @@ void display() {
 
      glClear(GL_COLOR_BUFFER_BIT);
 
-    //DrawField();
+    DrawField();
 
     DrawSnake(); 
 
