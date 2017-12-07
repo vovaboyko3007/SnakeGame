@@ -1,7 +1,7 @@
 #include <time.h>
-#include <SFML\Graphics.hpp>
+//#include <SFML\Graphics.hpp>
 #include <stdlib.h>
-#include  <GL/glut.h>
+#include  "gult/glut.h"
 #include <windows.h>
 #include <iostream>
 
@@ -79,7 +79,7 @@ void display() {
 
      glClear(GL_COLOR_BUFFER_BIT);
 
-    DrawField();
+    //DrawField();
 
     DrawSnake(); 
 
