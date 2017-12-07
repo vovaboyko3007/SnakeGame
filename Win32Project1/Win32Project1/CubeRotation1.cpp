@@ -1,7 +1,9 @@
 #include <time.h>
+#include <SFML\Graphics.hpp>
 #include <stdlib.h>
 #include  <GL/glut.h>
 #include <windows.h>
+#include <iostream>
 
 int N=30,M=20;
 int Scale=25;
@@ -107,6 +109,45 @@ void timer(int = 0)
        
  glutTimerFunc(100,timer,0);
 }
+/*
+void menu(){  
+    int f=1,k,code;
+    SetColor(0,0);
+    GotoXY(27,12);
+    SetColor(14,0); 
+    cout << Rus("-->Новая игра<--");
+    GotoXY(30,13);
+    SetColor(15,0); 
+    cout<<Rus("   Выход   ");
+    do{
+        k=0;
+        code=getch();
+        if (code==224||code==0)
+            code=getch();
+        if(code==80){
+            f=f*(-1);
+            if (f==1){
+                GotoXY(27,12); SetColor(14,0); cout<<Rus("-->Новая игра<--");
+                GotoXY(30,13); SetColor(15,0); cout<<Rus("   Выход   ");
+            }else{ 
+                GotoXY(27,12); SetColor(15,0); cout<<Rus("   Новая игра   ");
+                GotoXY(30,13); SetColor(14,0); cout<<Rus("-->Выход<--");
+            }
+        }else if(code==72){
+            f=f*(-1);
+            if (f==1){
+                GotoXY(27,12); SetColor(14,0); cout<<Rus("-->Новая игра<--");
+                GotoXY(30,13); SetColor(15,0); cout<<Rus("   Выход   ");
+            }else{ 
+                GotoXY(27,12); SetColor(15,0);  cout<<Rus("   Новая игра   ");
+                GotoXY(30,13); SetColor(14,0); cout<<Rus("-->Выход<--");
+            }
+        }else if(code==13) k=1; 
+    }while (k==0);
+    if(f!=1) exit(0);
+    //дальше запускаем функцию игры=)
+    gamefunc();
+}*/
 
 int __stdcall WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,LPSTR lpCmdLine,int nShowCmd){
 
@@ -121,7 +162,7 @@ int __stdcall WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,LPSTR lpCmdLin
 
 glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB );
 glutInitWindowSize (w, h);
-glutCreateWindow ("Test"); 
+glutCreateWindow ("Вужик_жужик"); 
 glClearColor(1.0,1.0,0.6,1.0);  //цвет фона
 glMatrixMode(GL_PROJECTION);
 glLoadIdentity();
